@@ -106,7 +106,7 @@ class ShuttleRouteDetailPageState extends State<ShuttleRouteDetailPage> {
 
 // Function to get directions from the Google Maps Directions API
 Future<List<LatLng>> getDirections(LatLng start, LatLng end) async {
-  const apiKey = 'AIzaSyCb4VdQAfrxWlqi23Kdi7VUoTrh1YZ9LCY';
+  const apiKey = 'APIKEY';
 
   final String startLatLng = '${start.latitude},${start.longitude}';
   final String endLatLng = '${end.latitude},${end.longitude}';
@@ -138,7 +138,7 @@ Future<List<LatLng>> getDirections(LatLng start, LatLng end) async {
 }
 
 Future<LatLng> getLatLngFromAddress(String address) async {
-  const apiKey = 'AIzaSyCb4VdQAfrxWlqi23Kdi7VUoTrh1YZ9LCY';
+  const apiKey = 'APIKEY';
   final String url =
       'https://maps.googleapis.com/maps/api/geocode/json?address=${Uri.encodeComponent(address)}&key=$apiKey';
 
